@@ -8,7 +8,7 @@ public extension View {
     onCancel: @escaping () -> () = { },
     onDocumentsPicked: @escaping (_: [URL]) -> () = { _ in }
   ) -> some View {
-    Group {
+    ZStack {
       self
       DocumentPicker(isPresented: isPresented, documentTypes: documentTypes, onCancel: onCancel, onDocumentsPicked: onDocumentsPicked)
     }
